@@ -9,7 +9,7 @@ const Resume = () => (
     <Main
         title="Resume"
         description="Patrick Johnson's Resume">
-            <a href='Patrick_Johnson_Resume.pdf' target="_blank">view</a>
+            <a href='/data/pdf/Patrick_Johnson_Resume.pdf' target="_blank">view</a>
             
     </Main>
 );
