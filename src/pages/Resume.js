@@ -1,16 +1,23 @@
 import React from 'react';
 import Main from '../layouts/Main';
-import {Document, pdfjs} from 'react-pdf';
+import { Document,Page,pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const Resume = () => (
-    <Main
-        title="Resume"
-        description="Patrick Johnson's Resume">
-            <a href='/data/pdf/Patrick_Johnson_Resume.pdf' target="_blank">view</a>
-            
+
+    <Main>
+            <Document
+                options={{
+                    cMapUrl: `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
+                    cMapPacked: true,
+                  }}
+                file={process.env.PUBLIC_URL + '/resume.pdf'}
+                onLoadError={console.error}
+                onLoadSuccess={console.log('suc')}
+            >
+                <Page pageNumber={1}/>
+            </Document>
     </Main>
 );
 
