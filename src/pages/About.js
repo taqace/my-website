@@ -7,9 +7,9 @@ import Main from '../layouts/Main';
 
 const markdown = raw('../data/about.md');
 
-const count = markdown.split(/\s+/)
+/*const count = markdown.split(/\s+/)
     .map((s) => s.replace(/\W/g,''))
-    .filter((s) => s.length).length;
+    .filter((s) => s.length).length;*/
 
 const LinkRenderer = ({ ...children }) => <Link {...children} />;
 
