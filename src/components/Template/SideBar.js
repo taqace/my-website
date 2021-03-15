@@ -20,8 +20,8 @@ const SideBar = () => (
         <section className="blurb">
             <h2>About me</h2>
             <p>
-                Hi, I&apos;m Patrick. CCNY computer science grad. I build things.
-                Used to be Boeing airplanes, and now develop software. 
+                Hi, I&apos;m Patrick. CCNY computer science grad. I like building things.
+                It used to be Boeing airplanes, and now it's software. 
                 Feel free to contact me! 
             </p>
         </section>
